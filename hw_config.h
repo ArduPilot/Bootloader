@@ -18,7 +18,11 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FMU
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FMU v1.x"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0010
 # define BOOT_DELAY_ADDRESS             0x000001a0
 
@@ -52,7 +56,11 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FMUV2
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FMU v2.x"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0011
 # define BOOT_DELAY_ADDRESS             0x000001a0
 
@@ -87,7 +95,11 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FLOW
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FLOW v1.3"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0015
 
 # define BOARD_TYPE                     6
@@ -113,7 +125,11 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_DISCOVERY
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL DISCOVERY"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0001
 
 # define BOARD_TYPE                     99
@@ -140,7 +156,10 @@
 # define BOOTLOADER_DELAY               200
 # define BOARD_PIO
 # define INTERFACE_USART                1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                ""
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   -1
 
 # define OSC_FREQ                       24
@@ -183,7 +202,11 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_AEROCORE
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "Gumstix BL AEROCORE"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x1001
 
 # define BOARD_TYPE                     98
@@ -217,7 +240,11 @@
 # define BOOTLOADER_DELAY               3000
 # define BOARD_MAVSTATION
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "MAVSTATION BL v0.1"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0014
 
 
@@ -250,6 +277,234 @@
 # define BOARD_FLASH_SECTORS            116
 # define BOARD_TYPE                     0x14
 # define FLASH_SECTOR_SIZE              0x400
+
+/****************************************************************************
+ * TARGET_HW_VRX_BRAIN_V51
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_VRX_BRAIN_V51)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_BRAINV52
+# define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO10 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "Laser Navigation"
+# define USBDEVICESTRING                "VRX BL BRAIN v5.1"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x27AC
+# define USBPRODUCTID                   0x1151
+# define BOOT_DELAY_ADDRESS             0x000001a0
+
+# define BOARD_TYPE                     1151
+# define BOARD_FLASH_SECTORS            11
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO15
+# define BOARD_PIN_LED_BOOTLOADER       GPIO14
+# define BOARD_PORT_LEDS                GPIOD
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPDEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define BOARD_FORCE_BL_PIN             GPIO10
+# define BOARD_FORCE_BL_PORT            GPIOA
+# define BOARD_FORCE_BL_CLOCK_REGISTER  RCC_AHB1ENR
+# define BOARD_FORCE_BL_CLOCK_BIT       RCC_AHB1ENR_IOPAEN
+# define BOARD_FORCE_BL_PULL            GPIO_PUPD_PULLUP
+# define BOARD_FORCE_BL_STATE           0
+
+/****************************************************************************
+ * TARGET_HW_VRX_BRAIN_V52
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_VRX_BRAIN_V52)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_BRAINV52
+# define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO10 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "Laser Navigation"
+# define USBDEVICESTRING                "VRX BL BRAIN v5.2"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x27AC
+# define USBPRODUCTID                   0x1152
+# define BOOT_DELAY_ADDRESS             0x000001a0
+
+# define BOARD_TYPE                     1152
+# define BOARD_FLASH_SECTORS            11
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO15
+# define BOARD_PIN_LED_BOOTLOADER       GPIO14
+# define BOARD_PORT_LEDS                GPIOD
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPDEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define BOARD_FORCE_BL_PIN             GPIO10
+# define BOARD_FORCE_BL_PORT            GPIOA
+# define BOARD_FORCE_BL_CLOCK_REGISTER  RCC_AHB1ENR
+# define BOARD_FORCE_BL_CLOCK_BIT       RCC_AHB1ENR_IOPAEN
+# define BOARD_FORCE_BL_PULL            GPIO_PUPD_PULLUP
+# define BOARD_FORCE_BL_STATE           0
+
+/****************************************************************************
+ * TARGET_HW_VRX_BRAIN_V54
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_VRX_BRAIN_V54)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_BRAINV54
+# define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO10 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "Laser Navigation"
+# define USBDEVICESTRING                "VRX BL BRAIN v5.4"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x27AC
+# define USBPRODUCTID                   0x1154
+# define BOOT_DELAY_ADDRESS             0x000001a0
+
+# define BOARD_TYPE                     1154
+# define BOARD_FLASH_SECTORS            23
+# define BOARD_FLASH_SIZE               (2048 * 1024)
+
+# define OSC_FREQ                       24
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO15
+# define BOARD_PIN_LED_BOOTLOADER       GPIO14
+# define BOARD_PORT_LEDS                GPIOD
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPDEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define BOARD_FORCE_BL_PIN             GPIO10
+# define BOARD_FORCE_BL_PORT            GPIOA
+# define BOARD_FORCE_BL_CLOCK_REGISTER  RCC_AHB1ENR
+# define BOARD_FORCE_BL_CLOCK_BIT       RCC_AHB1ENR_IOPAEN
+# define BOARD_FORCE_BL_PULL            GPIO_PUPD_PULLUP
+# define BOARD_FORCE_BL_STATE           0
+
+/****************************************************************************
+ * TARGET_HW_VRX_CORE_V10
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_VRX_CORE_V10)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_COREV10
+# define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO10 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "Laser Navigation"
+# define USBDEVICESTRING                "VRX BL CORE v1.0"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x27AC
+# define USBPRODUCTID                   0x1910
+# define BOOT_DELAY_ADDRESS             0x000001a0
+
+# define BOARD_TYPE                     1910
+# define BOARD_FLASH_SECTORS            11
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO15
+# define BOARD_PIN_LED_BOOTLOADER       GPIO14
+# define BOARD_PORT_LEDS                GPIOD
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPDEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define BOARD_FORCE_BL_PIN             GPIO10
+# define BOARD_FORCE_BL_PORT            GPIOA
+# define BOARD_FORCE_BL_CLOCK_REGISTER  RCC_AHB1ENR
+# define BOARD_FORCE_BL_CLOCK_BIT       RCC_AHB1ENR_IOPAEN
+# define BOARD_FORCE_BL_PULL            GPIO_PUPD_PULLUP
+# define BOARD_FORCE_BL_STATE           0
+
+/****************************************************************************
+ * TARGET_HW_VRX_UBRAIN_V51
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_VRX_UBRAIN_V51)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_UBRAINV51
+# define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO10 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "Laser Navigation"
+# define USBDEVICESTRING                "VRX BL UBRAIN v5.1"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x27AC
+# define USBPRODUCTID                   0x1351
+# define BOOT_DELAY_ADDRESS             0x000001a0
+
+# define BOARD_TYPE                     1351
+# define BOARD_FLASH_SECTORS            11
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO15
+# define BOARD_PIN_LED_BOOTLOADER       GPIO14
+# define BOARD_PORT_LEDS                GPIOD
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPDEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define BOARD_FORCE_BL_PIN             GPIO10
+# define BOARD_FORCE_BL_PORT            GPIOA
+# define BOARD_FORCE_BL_CLOCK_REGISTER  RCC_AHB1ENR
+# define BOARD_FORCE_BL_CLOCK_BIT       RCC_AHB1ENR_IOPAEN
+# define BOARD_FORCE_BL_PULL            GPIO_PUPD_PULLUP
+# define BOARD_FORCE_BL_STATE           0
+
+/****************************************************************************
+ * TARGET_HW_VRX_UBRAIN_V52
+ ****************************************************************************/
+
+#elif  defined(TARGET_HW_VRX_UBRAIN_V52)
+
+# define APP_LOAD_ADDRESS               0x08004000
+# define BOOTLOADER_DELAY               5000
+# define BOARD_UBRAINV51
+# define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO10 | GPIO11 | GPIO12
+# define USBMANUFACTURERSTRING          "Laser Navigation"
+# define USBDEVICESTRING                "VRX BL UBRAIN v5.2"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x27AC
+# define USBPRODUCTID                   0x1352
+# define BOOT_DELAY_ADDRESS             0x000001a0
+
+# define BOARD_TYPE                     1352
+# define BOARD_FLASH_SECTORS            11
+# define BOARD_FLASH_SIZE               (1024 * 1024)
+
+# define OSC_FREQ                       8
+
+# define BOARD_PIN_LED_ACTIVITY         GPIO15
+# define BOARD_PIN_LED_BOOTLOADER       GPIO14
+# define BOARD_PORT_LEDS                GPIOD
+# define BOARD_CLOCK_LEDS               RCC_AHB1ENR_IOPDEN
+# define BOARD_LED_ON                   gpio_clear
+# define BOARD_LED_OFF                  gpio_set
+
+# define BOARD_FORCE_BL_PIN             GPIO10
+# define BOARD_FORCE_BL_PORT            GPIOA
+# define BOARD_FORCE_BL_CLOCK_REGISTER  RCC_AHB1ENR
+# define BOARD_FORCE_BL_CLOCK_BIT       RCC_AHB1ENR_IOPAEN
+# define BOARD_FORCE_BL_PULL            GPIO_PUPD_PULLUP
+# define BOARD_FORCE_BL_STATE           0
 
 #else
 # error Undefined Target Hardware

@@ -36,6 +36,7 @@ export COMMON_SRCS	 = bl.c cdcacm.c  usart.c
 # Bootloaders to build
 #
 TARGETS			 = px4fmu_bl px4fmuv2_bl px4flow_bl px4discovery_bl px4aerocore_bl px4io_bl px4mavstation_bl
+TARGETS			+= vrbrainv51_bl vrbrainv52_bl vrbrainv54_bl vrcorev10_bl vrubrainv51_bl vrubrainv52_bl
 
 # px4io_bl px4flow_bl
 
@@ -63,6 +64,24 @@ px4flow_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 
 px4aerocore_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
 	make -f Makefile.f4 TARGET_HW=PX4_AEROCORE_V1 LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+vrbrainv51_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	make -f Makefile.f4 TARGET_HW=VRX_BRAIN_V51  LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+vrbrainv52_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	make -f Makefile.f4 TARGET_HW=VRX_BRAIN_V52  LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+vrbrainv54_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	make -f Makefile.f4 TARGET_HW=VRX_BRAIN_V54  LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+vrcorev10_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	make -f Makefile.f4 TARGET_HW=VRX_CORE_V10  LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+vrubrainv51_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	make -f Makefile.f4 TARGET_HW=VRX_UBRAIN_V51  LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
+
+vrubrainv52_bl: $(MAKEFILE_LIST) $(LIBOPENCM3)
+	make -f Makefile.f4 TARGET_HW=VRX_UBRAIN_V52  LINKER_FILE=stm32f4.ld TARGET_FILE_NAME=$@
 
 # Default bootloader delay is *very* short, just long enough to catch
 # the board for recovery but not so long as to make restarting after a 
