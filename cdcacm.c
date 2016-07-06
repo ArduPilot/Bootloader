@@ -48,9 +48,9 @@
  *  element[0] maps to requested index 1
  */
 static const char *usb_strings[] = { 
-	"3D Robotics", /* Maps to Index 1 Index */
+	USBMANUFACTURERSTRING, /* Maps to Index 1 Index */
 	USBDEVICESTRING,
-	"0",
+	USBSERIALNUMBERSTRING,
 };
 #define NUM_USB_STRINGS (sizeof(usb_strings)/sizeof(usb_strings[0]))
 
@@ -67,7 +67,7 @@ static const struct usb_device_descriptor dev = {
 	.bDeviceSubClass = 0,
 	.bDeviceProtocol = 0,
 	.bMaxPacketSize0 = 64,
-	.idVendor = 0x26AC,					/**< Vendor ID (VID) */
+	.idVendor = USBVENDORID,			/**< Vendor ID (VID) */
 	.idProduct = USBPRODUCTID,			/**< Product ID (PID) */
 	.bcdDevice = 0x0101,				/**< Product version. Set to 1.01 (0x0101) to agree with NuttX */
 	.iManufacturer = 1,					/**< Use string with index 1 for the manufacturer string ("3D Robotics") */

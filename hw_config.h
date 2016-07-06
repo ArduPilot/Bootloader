@@ -18,7 +18,10 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FMU
 # define INTERFACE_USB                  1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FMU v1.x"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0010
 # define BOOT_DELAY_ADDRESS             0x000001a0
 
@@ -52,7 +55,10 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FMUV2
 # define INTERFACE_USB                  1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FMU v2.x"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0011
 # define BOOT_DELAY_ADDRESS             0x000001a0
 
@@ -87,7 +93,10 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FLOW
 # define INTERFACE_USB                  1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FLOW v1.3"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0015
 
 # define BOARD_TYPE                     6
@@ -113,7 +122,10 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_DISCOVERY
 # define INTERFACE_USB                  1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL DISCOVERY"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0001
 
 # define BOARD_TYPE                     99
@@ -140,7 +152,10 @@
 # define BOOTLOADER_DELAY               200
 # define BOARD_PIO
 # define INTERFACE_USART                1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                ""
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   -1
 
 # define OSC_FREQ                       24
@@ -183,7 +198,10 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_AEROCORE
 # define INTERFACE_USB                  1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "Gumstix BL AEROCORE"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x1001
 
 # define BOARD_TYPE                     98
@@ -217,7 +235,10 @@
 # define BOOTLOADER_DELAY               3000
 # define BOARD_MAVSTATION
 # define INTERFACE_USB                  1
+# define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "MAVSTATION BL v0.1"
+# define USBSERIALNUMBERSTRING          "0"
+# define USBVENDORID                    0x26AC
 # define USBPRODUCTID                   0x0014
 
 
