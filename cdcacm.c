@@ -264,8 +264,8 @@ usb_cinit(void)
 
         /* Configure to use the Alternate IO Functions USB DP,DM and VBUS */
 
-        gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, GPIO9 | GPIO11 | GPIO12);
-        gpio_set_af(GPIOA, GPIO_AF10, GPIO9 | GPIO11 | GPIO12);
+        gpio_mode_setup(GPIOA, GPIO_MODE_AF, GPIO_PUPD_NONE, INTERFACE_USB_PIN);
+        gpio_set_af(GPIOA, GPIO_AF10, INTERFACE_USB_PIN);
 
         usbd_dev = usbd_init(&otgfs_usb_driver, &dev, &config, usb_strings, NUM_USB_STRINGS,
                                         usbd_control_buffer, sizeof(usbd_control_buffer));

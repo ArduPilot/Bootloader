@@ -18,6 +18,7 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FMU
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
 # define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FMU v1.x"
 # define USBSERIALNUMBERSTRING          "0"
@@ -55,6 +56,7 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FMUV2
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
 # define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FMU v2.x"
 # define USBSERIALNUMBERSTRING          "0"
@@ -93,6 +95,7 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_FLOW
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
 # define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL FLOW v1.3"
 # define USBSERIALNUMBERSTRING          "0"
@@ -122,6 +125,7 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_DISCOVERY
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
 # define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "PX4 BL DISCOVERY"
 # define USBSERIALNUMBERSTRING          "0"
@@ -198,6 +202,7 @@
 # define BOOTLOADER_DELAY               5000
 # define BOARD_AEROCORE
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
 # define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "Gumstix BL AEROCORE"
 # define USBSERIALNUMBERSTRING          "0"
@@ -235,6 +240,7 @@
 # define BOOTLOADER_DELAY               3000
 # define BOARD_MAVSTATION
 # define INTERFACE_USB                  1
+# define INTERFACE_USB_PIN              GPIO9 | GPIO11 | GPIO12
 # define USBMANUFACTURERSTRING          "3D Robotics"
 # define USBDEVICESTRING                "MAVSTATION BL v0.1"
 # define USBSERIALNUMBERSTRING          "0"
