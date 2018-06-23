@@ -54,8 +54,7 @@ TARGETS	= \
 	px4io_bl \
 	px4iov3_bl \
 	tapv1_bl \
-	cube_f4_bl \
-	cube_f7_bl
+	cube_f4_bl
 
 all:	$(TARGETS) sizes
 
