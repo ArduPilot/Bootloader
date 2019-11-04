@@ -73,4 +73,4 @@ AP_HW_CUAV_GPS                       1001
 AP_HW_OMNIBUSF4                      1002
 AP_HW_ZUBAXGNSS                      1003
 AP_HW_F303_PERIPH                    1004
-
+AP_HW_FRSKY_R9                       1005
