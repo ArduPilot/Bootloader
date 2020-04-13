@@ -92,4 +92,4 @@ AP_HW_SUCCEXF4                       1011
 AP_HW_LIGHTSPARKMINI                 1012
 AP_HW_MATEKH743                      1013
 AP_HW_MRO_CONTROL_ZERO_PR            1014
-
+AP_HW_MRO_NEXUS                      1015
